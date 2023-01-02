@@ -1,7 +1,7 @@
 
     <div class="header">
         <div class="name-container">
-            <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/srd5_360.png" style="padding-bottom: 5px;" alt="SRD5 by Roll20">
+            <img src="https://raw.githubusercontent.com/solar-studios/image_resources/main/Redsky_logo_final_no_spikes.png" style="padding-bottom: 5px;" alt="Redsky by Solar Studios">
             <input type="text" name="attr_character_name" style="width: 100%;">
             <span class="label" data-i18n="char-name-u">CHARACTER NAME</span>
         </div>
@@ -220,11 +220,6 @@
                             <span name='attr_animal_handling_bonus' title='@{animal_handling_bonus}'>0</span>
                             <button type='roll' name='roll_animal_handling' value='@{wtype}&{template:simple} {{rname=^{animal_handling-u}}} {{mod=@{animal_handling_bonus}}} {{r1=[[@{d20}+@{animal_handling_bonus}@{pbd_safe}]]}} @{rtype}+@{animal_handling_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='animal_handling-core'>Animal Handling <span>(Wis)</span></button>
                         </div>
-                        <div class="skill" data-i18n-list-item="arcana">
-                            <input type="checkbox" name="attr_arcana_prof" title="@{arcana_prof}" value="(@{pb}*@{arcana_type})">
-                            <span name='attr_arcana_bonus' title='@{arcana_bonus}'>0</span>
-                            <button type='roll' name='roll_arcana' value='@{wtype}&{template:simple} {{rname=^{arcana-u}}} {{mod=@{arcana_bonus}}} {{r1=[[@{d20}+@{arcana_bonus}@{pbd_safe}]]}} @{rtype}+@{arcana_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='arcana-core'>Arcana <span>(Int)</span></button>
-                        </div>
                         <div class="skill" data-i18n-list-item="athletics">
                             <input type="checkbox" name="attr_athletics_prof" title="@{athletics_prof}" value="(@{pb}*@{athletics_type})">
                             <span name='attr_athletics_bonus' title='@{athletics_bonus}'>0</span>
@@ -234,6 +229,11 @@
                             <input type="checkbox" name="attr_deception_prof" title="@{deception_prof}" value="(@{pb}*@{deception_type})">
                             <span name='attr_deception_bonus' title='@{deception_bonus}'>0</span>
                             <button type='roll' name='roll_deception' value='@{wtype}&{template:simple} {{rname=^{deception-u}}} {{mod=@{deception_bonus}}} {{r1=[[@{d20}+@{deception_bonus}@{pbd_safe}]]}} @{rtype}+@{deception_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='deception-core'>Deception <span>(Cha)</span></button>
+                        </div>
+                        <div class="skill" data-i18n-list-item="eldertech">
+                            <input type="checkbox" name="attr_eldertech_prof" title="@{eldertech_prof}" value="(@{pb}*@{eldertech_type})">
+                            <span name='attr_eldertech_bonus' title='@{eldertech_bonus}'>0</span>
+                            <button type='roll' name='roll_eldertech' value='@{wtype}&{template:simple} {{rname=^{eldertech-u}}} {{mod=@{eldertech_bonus}}} {{r1=[[@{d20}+@{eldertech_bonus}@{pbd_safe}]]}} @{rtype}+@{eldertech_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='eldertech-core'>Eldertech <span>(Int)</span></button>
                         </div>
                         <div class="skill" data-i18n-list-item="history">
                             <input type="checkbox" name="attr_history_prof" title="@{history_prof}" value="(@{pb}*@{history_type})">
@@ -255,10 +255,15 @@
                             <span name='attr_investigation_bonus' title='@{investigation_bonus}'>0</span>
                             <button type='roll' name='roll_investigation' value='@{wtype}&{template:simple} {{rname=^{investigation-u}}} {{mod=@{investigation_bonus}}} {{r1=[[@{d20}+@{investigation_bonus}@{pbd_safe}]]}} @{rtype}+@{investigation_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='investigation-core'>Investigation <span>(Int)</span></button>
                         </div>
+                        <div class="skill" data-i18n-list-item="materials">
+                            <input type="checkbox" name="attr_materials_prof" title="@{materials_prof}" value="(@{pb}*@{materials_type})">
+                            <span name='attr_materials_bonus' title='@{materials_bonus}'>0</span>
+                            <button type='roll' name='roll_materials' value='@{wtype}&{template:simple} {{rname=^{materials-u}}} {{mod=@{materials_bonus}}} {{r1=[[@{d20}+@{materials_bonus}@{pbd_safe}]]}} @{rtype}+@{materials_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='materials-core'>Materials <span>(Int)</span></button>
+                        </div>
                         <div class="skill" data-i18n-list-item="medicine">
                             <input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}" value="(@{pb}*@{medicine_type})">
                             <span name='attr_medicine_bonus' title='@{medicine_bonus}'>0</span>
-                            <button type='roll' name='roll_medicine' value='@{wtype}&{template:simple} {{rname=^{medicine-u}}} {{mod=@{medicine_bonus}}} {{r1=[[@{d20}+@{medicine_bonus}@{pbd_safe}]]}} @{rtype}+@{medicine_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='medicine-core'>Medicine <span>(Wis)</span></button>
+                            <button type='roll' name='roll_medicine' value='@{wtype}&{template:simple} {{rname=^{medicine-u}}} {{mod=@{medicine_bonus}}} {{r1=[[@{d20}+@{medicine_bonus}@{pbd_safe}]]}} @{rtype}+@{medicine_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='medicine-core'>Medicine <span>(Int)</span></button>
                         </div>
                         <div class="skill" data-i18n-list-item="nature">
                             <input type="checkbox" name="attr_nature_prof" title="@{nature_prof}" value="(@{pb}*@{nature_type})">
@@ -279,6 +284,11 @@
                             <input type="checkbox" name="attr_persuasion_prof" title="@{persuasion_prof}" value="(@{pb}*@{persuasion_type})">
                             <span name='attr_persuasion_bonus' title='@{persuasion_bonus}'>0</span>
                             <button type='roll' name='roll_persuasion' value='@{wtype}&{template:simple} {{rname=^{persuasion-u}}} {{mod=@{persuasion_bonus}}} {{r1=[[@{d20}+@{persuasion_bonus}@{pbd_safe}]]}} @{rtype}+@{persuasion_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='persuasion-core'>Persuasion <span>(Wis)</span></button>
+                        </div>
+                        <div class="skill" data-i18n-list-item="politics">
+                            <input type="checkbox" name="attr_politics_prof" title="@{politics_prof}" value="(@{pb}*@{politics_type})">
+                            <span name='attr_politics_bonus' title='@{politics_bonus}'>0</span>
+                            <button type='roll' name='roll_politics' value='@{wtype}&{template:simple} {{rname=^{politics-u}}} {{mod=@{politics_bonus}}} {{r1=[[@{d20}+@{politics_bonus}@{pbd_safe}]]}} @{rtype}+@{politics_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='politics-core'>Politics <span>(Int)</span></button>
                         </div>
                         <div class="skill" data-i18n-list-item="religion">
                             <input type="checkbox" name="attr_religion_prof" title="@{religion_prof}" value="(@{pb}*@{religion_type})">
@@ -435,6 +445,10 @@
                 <div class="ac">
                     <input type="text" name="attr_ac" title="@{ac}">
                     <span class="label pc-ac" data-i18n="armor-class-u">ARMOR CLASS</span>
+                </div>
+                <div class="ac">
+                    <input type="text" name="attr_tac" title="@{tac}">
+                    <span class="label pc-ac" data-i18n="touch-ac-u">TOUCH AC</span>
                 </div>
                 <div class="init">
                     <span name="attr_initiative_bonus" title="@{initiative_bonus}"></span>
@@ -700,7 +714,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <span class="label" style="margin-top: 0px; position: absolute; bottom: 0px;" data-i18n="atk-spellcasting-u">ATTACKS & SPELLCASTING</span>
+                <span class="label" style="margin-top: 0px; position: absolute; bottom: 0px;" data-i18n="atk-spellcasting-u">ATTACKS</span>
             </div>
             <input type="hidden" class="toggleflag" name="attr_global_ac_mod_flag">
             <div class="equipment hidden">

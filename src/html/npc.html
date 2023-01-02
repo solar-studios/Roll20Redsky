@@ -10,11 +10,13 @@
         </div>
         <div class="row">
             <span data-i18n="npc-type-u">NPC TYPE</span>
-            <input type="text" name="attr_npc_type" placeholder="Medium fiend, any evil alignment" data-i18n-placeholder="npc-type-place">
+            <input type="text" name="attr_npc_type" placeholder="Medium beast, no alignment" data-i18n-placeholder="npc-type-place">
         </div>
         <div class="row">
             <span data-i18n="armor-class-u">ARMOR CLASS</span>
             <input class="num" type="text" name="attr_npc_ac" placeholder="10">
+            <span data-i18n="armor-class-u">TOUCH AC</span>
+            <input class="num" type="text" name="attr_npc_tac" placeholder="10">
             <span data-i18n="type-u">TYPE</span>
             <input type="text" name="attr_npc_actype" placeholder="scale mail" data-i18n-placeholder="npc-armor-place" value="">
         </div>
@@ -84,10 +86,6 @@
                     <span data-i18n="animal_handling-u">ANIMAL HANDLING</span>
                     <input class="num" type="text" name="attr_npc_animal_handling_base" placeholder="0">
                 </div>
-                <div class="row" data-i18n-list-item="arcana">
-                    <span data-i18n="arcana-u">ARCANA</span>
-                    <input class="num" type="text" name="attr_npc_arcana_base" placeholder="0">
-                </div>
                 <div class="row" data-i18n-list-item="athletics">
                     <span data-i18n="athletics-u">ATHLETICS</span>
                     <input class="num" type="text" name="attr_npc_athletics_base" placeholder="0">
@@ -95,6 +93,10 @@
                 <div class="row" data-i18n-list-item="deception">
                     <span data-i18n="deception-u">DECEPTION</span>
                     <input class="num" type="text" name="attr_npc_deception_base" placeholder="0">
+                </div>
+                <div class="row" data-i18n-list-item="eldertech">
+                    <span data-i18n="eldertech-u">ELDERTECH</span>
+                    <input class="num" type="text" name="attr_npc_eldertech_base" placeholder="0">
                 </div>
                 <div class="row" data-i18n-list-item="history">
                     <span data-i18n="history-u">HISTORY</span>
@@ -113,6 +115,10 @@
                 <div class="row" data-i18n-list-item="investigation">
                     <span data-i18n="investigation-u">INVESTIGATION</span>
                     <input class="num" type="text" name="attr_npc_investigation_base" placeholder="0">
+                </div>
+                <div class="row" data-i18n-list-item="materials">
+                    <span data-i18n="materials-u">MATERIALS</span>
+                    <input class="num" type="text" name="attr_npc_materials_base" placeholder="0">
                 </div>
                 <div class="row" data-i18n-list-item="medicine">
                     <span data-i18n="medicine-u">MEDICINE</span>
@@ -136,6 +142,10 @@
                     <span data-i18n="persuasion-u">PERSUASION</span>
                     <input class="num" type="text" name="attr_npc_persuasion_base" placeholder="0">
                 </div>
+                <div class="row" data-i18n-list-item="politics">
+                    <span data-i18n="politics-u">POLITICS</span>
+                    <input class="num" type="text" name="attr_npc_politics_base" placeholder="0">
+                </div>
                 <div class="row" data-i18n-list-item="religion">
                     <span data-i18n="religion-u">RELIGION</span>
                     <input class="num" type="text" name="attr_npc_religion_base" placeholder="0">
@@ -155,18 +165,20 @@
             </div>
             <input type="hidden" name="attr_npc_acrobatics" value="@{dexterity_mod}">
             <input type="hidden" name="attr_npc_animal_handling" value="@{wisdom_mod}">
-            <input type="hidden" name="attr_npc_arcana" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_athletics" value="@{strength_mod}">
             <input type="hidden" name="attr_npc_deception" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_eldertech" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_history" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_insight" value="@{wisdom_mod}">
             <input type="hidden" name="attr_npc_intimidation" value="@{charisma_mod}">
             <input type="hidden" name="attr_npc_investigation" value="@{intelligence_mod}">
-            <input type="hidden" name="attr_npc_medicine" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_materials" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_medicine" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_nature" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_perception" value="@{wisdom_mod}">
             <input type="hidden" name="attr_npc_performance" value="@{charisma_mod}">
             <input type="hidden" name="attr_npc_persuasion" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_politics" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_religion" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_sleight_of_hand" value="@{dexterity_mod}">
             <input type="hidden" name="attr_npc_stealth" value="@{dexterity_mod}">
@@ -206,7 +218,7 @@
             <span data-i18n="token_size-u">TOKEN SIZE</span>
             <input class="text" name="attr_token_size" value="1" placeholder="1">
         </div>
-        <div class="row">
+        <!--<div class="row">
             <input class="npcspellcastingflag" type="checkbox" name="attr_npcspellcastingflag" value="1">
             <span data-i18n="spellcast-npc-u">SPELLCASTING NPC</span>
             <div class="npcspelloptions">
@@ -235,7 +247,7 @@
                     <input type="text" class="num" name="attr_spell_dc_mod" placeholder="0" value="0">
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="row">
             <input type="checkbox" name="attr_npcreactionsflag" value="1">
             <span data-i18n="has-reaction-u">HAS REACTIONS</span>
@@ -287,10 +299,10 @@
             <input type="checkbox" name="attr_init_tiebreaker" value="@{dexterity}/100">
             <span data-i18n="add-dex-tiebreaker-u">ADD DEX TIEBREAKER TO INITIATIVE</span>
         </div>
-        <div class="row">
+        <!--<div class="row">
             <input type="checkbox" name="attr_licensedsheet" value="1">
             <span data-i18n="use-licensed-sheet-styling">USE OFFICIAL D&D STYLING</span>
-        </div>
+        </div>-->
     </div>
     <div class="display stat-block">
         <div class="row title red">
@@ -307,6 +319,8 @@
             <span class="num" name="attr_npc_ac"></span>
             <input class="actype" type="hidden" name="attr_npc_actype" value="">
             <span class="parens" name="attr_npc_actype"></span>
+            <span data-i18n="tac" class="bold">Touch AC</span>
+            <span class="num" name="attr_npc_tac"></span>
             <button type="roll" name="roll_npc_init" style="position: absolute; right: 5px; height: 30px; width: 20px;" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{init}}} {{mod=[[[[@{initiative_bonus}]][DEX]]]}} {{r1=[[@{d20}+[[@{initiative_bonus}]][DEX] &{tracker}]]}} {{normal=1}} {{type=Initiative}}">
                 <span class="npc-init-die">t</span>
                 <span style="display: block;">INIT</span>
@@ -426,13 +440,6 @@
                     <span class="stat" name="attr_npc_animal_handling"></span>
                 </button>
             </span>
-            <span data-i18n-list-item="arcana">
-                <input class="flag" type="hidden" name="attr_npc_arcana_flag" value="0">
-                <button type="roll" name="roll_npc_arcana" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{arcana}}} {{mod=@{npc_arcana}}} {{r1=[[@{d20}+@{npc_arcana}]]}} @{rtype}+@{npc_arcana}]]}} {{type=Skill}}">
-                    <span data-i18n="arcana">Arcana</span>
-                    <span class="stat" name="attr_npc_arcana"></span>
-                </button>
-            </span>
             <span data-i18n-list-item="athletics">
                 <input class="flag" type="hidden" name="attr_npc_athletics_flag" value="0">
                 <button type="roll" name="roll_npc_athletics" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{athletics}}} {{mod=@{npc_athletics}}} {{r1=[[@{d20}+@{npc_athletics}]]}} @{rtype}+@{npc_athletics}]]}} {{type=Skill}}">
@@ -445,6 +452,13 @@
                 <button type="roll" name="roll_npc_deception" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{deception}}} {{mod=@{npc_deception}}} {{r1=[[@{d20}+@{npc_deception}]]}} @{rtype}+@{npc_deception}]]}} {{type=Skill}}">
                     <span data-i18n="deception">Deception</span>
                     <span class="stat" name="attr_npc_deception"></span>
+                </button>
+            </span>
+            <span data-i18n-list-item="eldertech">
+                <input class="flag" type="hidden" name="attr_npc_eldertech_flag" value="0">
+                <button type="roll" name="roll_npc_eldertech" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{eldertech}}} {{mod=@{npc_eldertech}}} {{r1=[[@{d20}+@{npc_eldertech}]]}} @{rtype}+@{npc_eldertech}]]}} {{type=Skill}}">
+                    <span data-i18n="eldertech">Eldertech</span>
+                    <span class="stat" name="attr_npc_eldertech"></span>
                 </button>
             </span>
             <span data-i18n-list-item="history">
@@ -473,6 +487,13 @@
                 <button type="roll" name="roll_npc_investigation" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{investigation}}} {{mod=@{npc_investigation}}} {{r1=[[@{d20}+@{npc_investigation}]]}} @{rtype}+@{npc_investigation}]]}} {{type=Skill}}">
                     <span data-i18n="investigation">Investigation</span>
                     <span class="stat" name="attr_npc_investigation"></span>
+                </button>
+            </span>
+            <span data-i18n-list-item="materials">
+                <input class="flag" type="hidden" name="attr_npc_materials_flag" value="0">
+                <button type="roll" name="roll_npc_materials" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{materials}}} {{mod=@{npc_materials}}} {{r1=[[@{d20}+@{npc_materials}]]}} @{rtype}+@{npc_materials}]]}} {{type=Skill}}">
+                    <span data-i18n="materials">Materials</span>
+                    <span class="stat" name="attr_npc_materials"></span>
                 </button>
             </span>
             <span data-i18n-list-item="medicine">
@@ -508,6 +529,13 @@
                 <button type="roll" name="roll_npc_persuasion" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{persuasion}}} {{mod=@{npc_persuasion}}} {{r1=[[@{d20}+@{npc_persuasion}]]}} @{rtype}+@{npc_persuasion}]]}} {{type=Skill}}">
                     <span data-i18n="persuasion">Persuasion</span>
                     <span class="stat" name="attr_npc_persuasion"></span>
+                </button>
+            </span>
+            <span data-i18n-list-item="politics">
+                <input class="flag" type="hidden" name="attr_npc_politics_flag" value="0">
+                <button type="roll" name="roll_npc_politics" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{politics}}} {{mod=@{npc_politics}}} {{r1=[[@{d20}+@{npc_politics}]]}} @{rtype}+@{npc_politics}]]}} {{type=Skill}}">
+                    <span data-i18n="politics">Politics</span>
+                    <span class="stat" name="attr_npc_politics"></span>
                 </button>
             </span>
             <span data-i18n-list-item="religion">

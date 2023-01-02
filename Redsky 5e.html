@@ -1,23 +1,7 @@
-
-<input name="attr_version" type="hidden" value="3.0"/>
-<input class="monster_confirm_flag" name="attr_monster_confirm_flag" type="hidden"/>
-<input class="mancer_confirm_flag" name="attr_mancer_confirm_flag" type="hidden"/>
-<input class="licensedsheet" name="attr_licensedsheet" type="hidden"/>
-<div class="licensecontainer compendium-drop-target monsters" data-licensedsheet="attr_licensedsheet">
-  <input class="npc_toggle" name="attr_npc" type="hidden" value="0"/>
-  <input class="npcspellcastingflag" name="attr_npcspellcastingflag" type="hidden"/>
-  <input class="toggleflag" name="attr_rtype" type="hidden"/>
-  <div class="advantagetoggle">
+<input name="attr_version" type="hidden" value="3.0"/><input class="monster_confirm_flag" name="attr_monster_confirm_flag" type="hidden"/><input class="mancer_confirm_flag" name="attr_mancer_confirm_flag" type="hidden"/><input class="licensedsheet" name="attr_licensedsheet" type="hidden"/><div class="licensecontainer compendium-drop-target monsters" data-licensedsheet="attr_licensedsheet"><input class="npc_toggle" name="attr_npc" type="hidden" value="0"/><input class="npcspellcastingflag" name="attr_npcspellcastingflag" type="hidden"/><input class="toggleflag" name="attr_rtype" type="hidden"/><div class="advantagetoggle">
 	<input type="radio" class="toggle-left" name="attr_advantagetoggle" value="{{query=1}} {{advantage=1}} {{r2=[[@{d20}"><span data-i18n="adv-u">ADVANTAGE</span>
 	<input type="radio" class="toggle-center" name="attr_advantagetoggle" value="{{query=1}} {{normal=1}} {{r2=[[0d20" checked="checked"><span data-i18n="norm-u">NORMAL</span>
-	<input type="radio" class="toggle-right" name="attr_advantagetoggle" value="{{query=1}} {{disadvantage=1}} {{r2=[[@{d20}"><span data-i18n="disadv-u">DISADVANTAGE</span>
-  </div>
-  <input class="toggleflag" name="attr_wtype" type="hidden"/>
-  <div class="advantagetoggle whispertoggle">
-    <input class="toggle-left" name="attr_whispertoggle" type="radio" value="" checked="checked"/><span data-i18n="public:-u">PUBLIC</span>
-    <input class="toggle-right" name="attr_whispertoggle" type="radio" value="/w gm "/><span data-i18n="to-gm:-u">TO<span class="togm">GM</span></span>
-  </div>
-  <div class="container npc">
+	<input type="radio" class="toggle-right" name="attr_advantagetoggle" value="{{query=1}} {{disadvantage=1}} {{r2=[[@{d20}"><span data-i18n="disadv-u">DISADVANTAGE</span></div><input class="toggleflag" name="attr_wtype" type="hidden"/><div class="advantagetoggle whispertoggle"><input class="toggle-left" name="attr_whispertoggle" type="radio" value="" checked="checked"/><span data-i18n="public:-u">PUBLIC</span><input class="toggle-right" name="attr_whispertoggle" type="radio" value="/w gm "/><span data-i18n="to-gm:-u">TO<span class="togm">GM</span></span></div><div class="container npc">
     <input class="npc_options-flag" type="checkbox" name="attr_npc_options-flag" checked="checked"><span>y</span>
     <div class="npc_options">
         <div class="row title">
@@ -29,11 +13,13 @@
         </div>
         <div class="row">
             <span data-i18n="npc-type-u">NPC TYPE</span>
-            <input type="text" name="attr_npc_type" placeholder="Medium fiend, any evil alignment" data-i18n-placeholder="npc-type-place">
+            <input type="text" name="attr_npc_type" placeholder="Medium beast, no alignment" data-i18n-placeholder="npc-type-place">
         </div>
         <div class="row">
             <span data-i18n="armor-class-u">ARMOR CLASS</span>
             <input class="num" type="text" name="attr_npc_ac" placeholder="10">
+            <span data-i18n="armor-class-u">TOUCH AC</span>
+            <input class="num" type="text" name="attr_npc_tac" placeholder="10">
             <span data-i18n="type-u">TYPE</span>
             <input type="text" name="attr_npc_actype" placeholder="scale mail" data-i18n-placeholder="npc-armor-place" value="">
         </div>
@@ -103,10 +89,6 @@
                     <span data-i18n="animal_handling-u">ANIMAL HANDLING</span>
                     <input class="num" type="text" name="attr_npc_animal_handling_base" placeholder="0">
                 </div>
-                <div class="row" data-i18n-list-item="arcana">
-                    <span data-i18n="arcana-u">ARCANA</span>
-                    <input class="num" type="text" name="attr_npc_arcana_base" placeholder="0">
-                </div>
                 <div class="row" data-i18n-list-item="athletics">
                     <span data-i18n="athletics-u">ATHLETICS</span>
                     <input class="num" type="text" name="attr_npc_athletics_base" placeholder="0">
@@ -114,6 +96,10 @@
                 <div class="row" data-i18n-list-item="deception">
                     <span data-i18n="deception-u">DECEPTION</span>
                     <input class="num" type="text" name="attr_npc_deception_base" placeholder="0">
+                </div>
+                <div class="row" data-i18n-list-item="eldertech">
+                    <span data-i18n="eldertech-u">ELDERTECH</span>
+                    <input class="num" type="text" name="attr_npc_eldertech_base" placeholder="0">
                 </div>
                 <div class="row" data-i18n-list-item="history">
                     <span data-i18n="history-u">HISTORY</span>
@@ -132,6 +118,10 @@
                 <div class="row" data-i18n-list-item="investigation">
                     <span data-i18n="investigation-u">INVESTIGATION</span>
                     <input class="num" type="text" name="attr_npc_investigation_base" placeholder="0">
+                </div>
+                <div class="row" data-i18n-list-item="materials">
+                    <span data-i18n="materials-u">MATERIALS</span>
+                    <input class="num" type="text" name="attr_npc_materials_base" placeholder="0">
                 </div>
                 <div class="row" data-i18n-list-item="medicine">
                     <span data-i18n="medicine-u">MEDICINE</span>
@@ -155,6 +145,10 @@
                     <span data-i18n="persuasion-u">PERSUASION</span>
                     <input class="num" type="text" name="attr_npc_persuasion_base" placeholder="0">
                 </div>
+                <div class="row" data-i18n-list-item="politics">
+                    <span data-i18n="politics-u">POLITICS</span>
+                    <input class="num" type="text" name="attr_npc_politics_base" placeholder="0">
+                </div>
                 <div class="row" data-i18n-list-item="religion">
                     <span data-i18n="religion-u">RELIGION</span>
                     <input class="num" type="text" name="attr_npc_religion_base" placeholder="0">
@@ -174,18 +168,20 @@
             </div>
             <input type="hidden" name="attr_npc_acrobatics" value="@{dexterity_mod}">
             <input type="hidden" name="attr_npc_animal_handling" value="@{wisdom_mod}">
-            <input type="hidden" name="attr_npc_arcana" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_athletics" value="@{strength_mod}">
             <input type="hidden" name="attr_npc_deception" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_eldertech" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_history" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_insight" value="@{wisdom_mod}">
             <input type="hidden" name="attr_npc_intimidation" value="@{charisma_mod}">
             <input type="hidden" name="attr_npc_investigation" value="@{intelligence_mod}">
-            <input type="hidden" name="attr_npc_medicine" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_materials" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_medicine" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_nature" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_perception" value="@{wisdom_mod}">
             <input type="hidden" name="attr_npc_performance" value="@{charisma_mod}">
             <input type="hidden" name="attr_npc_persuasion" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_politics" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_religion" value="@{intelligence_mod}">
             <input type="hidden" name="attr_npc_sleight_of_hand" value="@{dexterity_mod}">
             <input type="hidden" name="attr_npc_stealth" value="@{dexterity_mod}">
@@ -225,7 +221,7 @@
             <span data-i18n="token_size-u">TOKEN SIZE</span>
             <input class="text" name="attr_token_size" value="1" placeholder="1">
         </div>
-        <div class="row">
+        <!--<div class="row">
             <input class="npcspellcastingflag" type="checkbox" name="attr_npcspellcastingflag" value="1">
             <span data-i18n="spellcast-npc-u">SPELLCASTING NPC</span>
             <div class="npcspelloptions">
@@ -254,7 +250,7 @@
                     <input type="text" class="num" name="attr_spell_dc_mod" placeholder="0" value="0">
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="row">
             <input type="checkbox" name="attr_npcreactionsflag" value="1">
             <span data-i18n="has-reaction-u">HAS REACTIONS</span>
@@ -306,10 +302,10 @@
             <input type="checkbox" name="attr_init_tiebreaker" value="@{dexterity}/100">
             <span data-i18n="add-dex-tiebreaker-u">ADD DEX TIEBREAKER TO INITIATIVE</span>
         </div>
-        <div class="row">
+        <!--<div class="row">
             <input type="checkbox" name="attr_licensedsheet" value="1">
             <span data-i18n="use-licensed-sheet-styling">USE OFFICIAL D&D STYLING</span>
-        </div>
+        </div>-->
     </div>
     <div class="display stat-block">
         <div class="row title red">
@@ -326,6 +322,8 @@
             <span class="num" name="attr_npc_ac"></span>
             <input class="actype" type="hidden" name="attr_npc_actype" value="">
             <span class="parens" name="attr_npc_actype"></span>
+            <span data-i18n="tac" class="bold">Touch AC</span>
+            <span class="num" name="attr_npc_tac"></span>
             <button type="roll" name="roll_npc_init" style="position: absolute; right: 5px; height: 30px; width: 20px;" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{init}}} {{mod=[[[[@{initiative_bonus}]][DEX]]]}} {{r1=[[@{d20}+[[@{initiative_bonus}]][DEX] &{tracker}]]}} {{normal=1}} {{type=Initiative}}">
                 <span class="npc-init-die">t</span>
                 <span style="display: block;">INIT</span>
@@ -445,13 +443,6 @@
                     <span class="stat" name="attr_npc_animal_handling"></span>
                 </button>
             </span>
-            <span data-i18n-list-item="arcana">
-                <input class="flag" type="hidden" name="attr_npc_arcana_flag" value="0">
-                <button type="roll" name="roll_npc_arcana" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{arcana}}} {{mod=@{npc_arcana}}} {{r1=[[@{d20}+@{npc_arcana}]]}} @{rtype}+@{npc_arcana}]]}} {{type=Skill}}">
-                    <span data-i18n="arcana">Arcana</span>
-                    <span class="stat" name="attr_npc_arcana"></span>
-                </button>
-            </span>
             <span data-i18n-list-item="athletics">
                 <input class="flag" type="hidden" name="attr_npc_athletics_flag" value="0">
                 <button type="roll" name="roll_npc_athletics" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{athletics}}} {{mod=@{npc_athletics}}} {{r1=[[@{d20}+@{npc_athletics}]]}} @{rtype}+@{npc_athletics}]]}} {{type=Skill}}">
@@ -464,6 +455,13 @@
                 <button type="roll" name="roll_npc_deception" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{deception}}} {{mod=@{npc_deception}}} {{r1=[[@{d20}+@{npc_deception}]]}} @{rtype}+@{npc_deception}]]}} {{type=Skill}}">
                     <span data-i18n="deception">Deception</span>
                     <span class="stat" name="attr_npc_deception"></span>
+                </button>
+            </span>
+            <span data-i18n-list-item="eldertech">
+                <input class="flag" type="hidden" name="attr_npc_eldertech_flag" value="0">
+                <button type="roll" name="roll_npc_eldertech" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{eldertech}}} {{mod=@{npc_eldertech}}} {{r1=[[@{d20}+@{npc_eldertech}]]}} @{rtype}+@{npc_eldertech}]]}} {{type=Skill}}">
+                    <span data-i18n="eldertech">Eldertech</span>
+                    <span class="stat" name="attr_npc_eldertech"></span>
                 </button>
             </span>
             <span data-i18n-list-item="history">
@@ -492,6 +490,13 @@
                 <button type="roll" name="roll_npc_investigation" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{investigation}}} {{mod=@{npc_investigation}}} {{r1=[[@{d20}+@{npc_investigation}]]}} @{rtype}+@{npc_investigation}]]}} {{type=Skill}}">
                     <span data-i18n="investigation">Investigation</span>
                     <span class="stat" name="attr_npc_investigation"></span>
+                </button>
+            </span>
+            <span data-i18n-list-item="materials">
+                <input class="flag" type="hidden" name="attr_npc_materials_flag" value="0">
+                <button type="roll" name="roll_npc_materials" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{materials}}} {{mod=@{npc_materials}}} {{r1=[[@{d20}+@{npc_materials}]]}} @{rtype}+@{npc_materials}]]}} {{type=Skill}}">
+                    <span data-i18n="materials">Materials</span>
+                    <span class="stat" name="attr_npc_materials"></span>
                 </button>
             </span>
             <span data-i18n-list-item="medicine">
@@ -527,6 +532,13 @@
                 <button type="roll" name="roll_npc_persuasion" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{persuasion}}} {{mod=@{npc_persuasion}}} {{r1=[[@{d20}+@{npc_persuasion}]]}} @{rtype}+@{npc_persuasion}]]}} {{type=Skill}}">
                     <span data-i18n="persuasion">Persuasion</span>
                     <span class="stat" name="attr_npc_persuasion"></span>
+                </button>
+            </span>
+            <span data-i18n-list-item="politics">
+                <input class="flag" type="hidden" name="attr_npc_politics_flag" value="0">
+                <button type="roll" name="roll_npc_politics" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=^{politics}}} {{mod=@{npc_politics}}} {{r1=[[@{d20}+@{npc_politics}]]}} @{rtype}+@{npc_politics}]]}} {{type=Skill}}">
+                    <span data-i18n="politics">Politics</span>
+                    <span class="stat" name="attr_npc_politics"></span>
                 </button>
             </span>
             <span data-i18n-list-item="religion">
@@ -943,17 +955,10 @@
                 </fieldset>
             </div>
         </div>
-
-  </div>
-  <div class="container pc">
-    <input class="tab-button core" name="attr_tab" type="radio" value="core" checked="checked"/><span data-i18n="core-u">CORE</span>
-    <input class="tab-button bio" name="attr_tab" type="radio" value="bio"/><span data-i18n="bio-u">BIO</span>
-    <input class="tab-button spells" name="attr_tab" type="radio" value="spells"/><span data-i18n="spells-u">SPELLS</span>
-    <input class="tab-button options" name="attr_tab" type="radio" value="options"/><span style="font-family: pictos">y</span>
-    <div class="page core">
+</div><div class="container pc"><input class="tab-button core" name="attr_tab" type="radio" value="core" checked="checked"/><span data-i18n="core-u">CORE</span><input class="tab-button bio" name="attr_tab" type="radio" value="bio"/><span data-i18n="bio-u">BIO</span><input class="tab-button spells" name="attr_tab" type="radio" value="spells"/><span data-i18n="spells-u">SPELLS</span><input class="tab-button options" name="attr_tab" type="radio" value="options"/><span style="font-family: pictos">y</span><div class="page core">
     <div class="header">
         <div class="name-container">
-            <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/srd5_360.png" style="padding-bottom: 5px;" alt="SRD5 by Roll20">
+            <img src="https://raw.githubusercontent.com/solar-studios/image_resources/main/Redsky_logo_final_no_spikes.png" style="padding-bottom: 5px;" alt="Redsky by Solar Studios">
             <input type="text" name="attr_character_name" style="width: 100%;">
             <span class="label" data-i18n="char-name-u">CHARACTER NAME</span>
         </div>
@@ -1172,11 +1177,6 @@
                             <span name='attr_animal_handling_bonus' title='@{animal_handling_bonus}'>0</span>
                             <button type='roll' name='roll_animal_handling' value='@{wtype}&{template:simple} {{rname=^{animal_handling-u}}} {{mod=@{animal_handling_bonus}}} {{r1=[[@{d20}+@{animal_handling_bonus}@{pbd_safe}]]}} @{rtype}+@{animal_handling_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='animal_handling-core'>Animal Handling <span>(Wis)</span></button>
                         </div>
-                        <div class="skill" data-i18n-list-item="arcana">
-                            <input type="checkbox" name="attr_arcana_prof" title="@{arcana_prof}" value="(@{pb}*@{arcana_type})">
-                            <span name='attr_arcana_bonus' title='@{arcana_bonus}'>0</span>
-                            <button type='roll' name='roll_arcana' value='@{wtype}&{template:simple} {{rname=^{arcana-u}}} {{mod=@{arcana_bonus}}} {{r1=[[@{d20}+@{arcana_bonus}@{pbd_safe}]]}} @{rtype}+@{arcana_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='arcana-core'>Arcana <span>(Int)</span></button>
-                        </div>
                         <div class="skill" data-i18n-list-item="athletics">
                             <input type="checkbox" name="attr_athletics_prof" title="@{athletics_prof}" value="(@{pb}*@{athletics_type})">
                             <span name='attr_athletics_bonus' title='@{athletics_bonus}'>0</span>
@@ -1186,6 +1186,11 @@
                             <input type="checkbox" name="attr_deception_prof" title="@{deception_prof}" value="(@{pb}*@{deception_type})">
                             <span name='attr_deception_bonus' title='@{deception_bonus}'>0</span>
                             <button type='roll' name='roll_deception' value='@{wtype}&{template:simple} {{rname=^{deception-u}}} {{mod=@{deception_bonus}}} {{r1=[[@{d20}+@{deception_bonus}@{pbd_safe}]]}} @{rtype}+@{deception_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='deception-core'>Deception <span>(Cha)</span></button>
+                        </div>
+                        <div class="skill" data-i18n-list-item="eldertech">
+                            <input type="checkbox" name="attr_eldertech_prof" title="@{eldertech_prof}" value="(@{pb}*@{eldertech_type})">
+                            <span name='attr_eldertech_bonus' title='@{eldertech_bonus}'>0</span>
+                            <button type='roll' name='roll_eldertech' value='@{wtype}&{template:simple} {{rname=^{eldertech-u}}} {{mod=@{eldertech_bonus}}} {{r1=[[@{d20}+@{eldertech_bonus}@{pbd_safe}]]}} @{rtype}+@{eldertech_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='eldertech-core'>Eldertech <span>(Int)</span></button>
                         </div>
                         <div class="skill" data-i18n-list-item="history">
                             <input type="checkbox" name="attr_history_prof" title="@{history_prof}" value="(@{pb}*@{history_type})">
@@ -1207,10 +1212,15 @@
                             <span name='attr_investigation_bonus' title='@{investigation_bonus}'>0</span>
                             <button type='roll' name='roll_investigation' value='@{wtype}&{template:simple} {{rname=^{investigation-u}}} {{mod=@{investigation_bonus}}} {{r1=[[@{d20}+@{investigation_bonus}@{pbd_safe}]]}} @{rtype}+@{investigation_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='investigation-core'>Investigation <span>(Int)</span></button>
                         </div>
+                        <div class="skill" data-i18n-list-item="materials">
+                            <input type="checkbox" name="attr_materials_prof" title="@{materials_prof}" value="(@{pb}*@{materials_type})">
+                            <span name='attr_materials_bonus' title='@{materials_bonus}'>0</span>
+                            <button type='roll' name='roll_materials' value='@{wtype}&{template:simple} {{rname=^{materials-u}}} {{mod=@{materials_bonus}}} {{r1=[[@{d20}+@{materials_bonus}@{pbd_safe}]]}} @{rtype}+@{materials_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='materials-core'>Materials <span>(Int)</span></button>
+                        </div>
                         <div class="skill" data-i18n-list-item="medicine">
                             <input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}" value="(@{pb}*@{medicine_type})">
                             <span name='attr_medicine_bonus' title='@{medicine_bonus}'>0</span>
-                            <button type='roll' name='roll_medicine' value='@{wtype}&{template:simple} {{rname=^{medicine-u}}} {{mod=@{medicine_bonus}}} {{r1=[[@{d20}+@{medicine_bonus}@{pbd_safe}]]}} @{rtype}+@{medicine_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='medicine-core'>Medicine <span>(Wis)</span></button>
+                            <button type='roll' name='roll_medicine' value='@{wtype}&{template:simple} {{rname=^{medicine-u}}} {{mod=@{medicine_bonus}}} {{r1=[[@{d20}+@{medicine_bonus}@{pbd_safe}]]}} @{rtype}+@{medicine_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='medicine-core'>Medicine <span>(Int)</span></button>
                         </div>
                         <div class="skill" data-i18n-list-item="nature">
                             <input type="checkbox" name="attr_nature_prof" title="@{nature_prof}" value="(@{pb}*@{nature_type})">
@@ -1231,6 +1241,11 @@
                             <input type="checkbox" name="attr_persuasion_prof" title="@{persuasion_prof}" value="(@{pb}*@{persuasion_type})">
                             <span name='attr_persuasion_bonus' title='@{persuasion_bonus}'>0</span>
                             <button type='roll' name='roll_persuasion' value='@{wtype}&{template:simple} {{rname=^{persuasion-u}}} {{mod=@{persuasion_bonus}}} {{r1=[[@{d20}+@{persuasion_bonus}@{pbd_safe}]]}} @{rtype}+@{persuasion_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='persuasion-core'>Persuasion <span>(Wis)</span></button>
+                        </div>
+                        <div class="skill" data-i18n-list-item="politics">
+                            <input type="checkbox" name="attr_politics_prof" title="@{politics_prof}" value="(@{pb}*@{politics_type})">
+                            <span name='attr_politics_bonus' title='@{politics_bonus}'>0</span>
+                            <button type='roll' name='roll_politics' value='@{wtype}&{template:simple} {{rname=^{politics-u}}} {{mod=@{politics_bonus}}} {{r1=[[@{d20}+@{politics_bonus}@{pbd_safe}]]}} @{rtype}+@{politics_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output} {{licensedsheet=@{licensedsheet}}}' data-i18n='politics-core'>Politics <span>(Int)</span></button>
                         </div>
                         <div class="skill" data-i18n-list-item="religion">
                             <input type="checkbox" name="attr_religion_prof" title="@{religion_prof}" value="(@{pb}*@{religion_type})">
@@ -1387,6 +1402,10 @@
                 <div class="ac">
                     <input type="text" name="attr_ac" title="@{ac}">
                     <span class="label pc-ac" data-i18n="armor-class-u">ARMOR CLASS</span>
+                </div>
+                <div class="ac">
+                    <input type="text" name="attr_tac" title="@{tac}">
+                    <span class="label pc-ac" data-i18n="touch-ac-u">TOUCH AC</span>
                 </div>
                 <div class="init">
                     <span name="attr_initiative_bonus" title="@{initiative_bonus}"></span>
@@ -1652,7 +1671,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <span class="label" style="margin-top: 0px; position: absolute; bottom: 0px;" data-i18n="atk-spellcasting-u">ATTACKS & SPELLCASTING</span>
+                <span class="label" style="margin-top: 0px; position: absolute; bottom: 0px;" data-i18n="atk-spellcasting-u">ATTACKS</span>
             </div>
             <input type="hidden" class="toggleflag" name="attr_global_ac_mod_flag">
             <div class="equipment hidden">
@@ -1894,9 +1913,7 @@
             </div>
         </div>
     </div>
-
-    </div>
-    <div class="page bio">    <div class="header">
+</div><div class="page bio">    <div class="header">
         <div class="name-container">
             <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/srd5_360.png" style="padding-bottom: 5px;" alt="SRD5 by Roll20">
             <input type="text" name="attr_character_name" style="width: 100%;">
@@ -1962,9 +1979,7 @@
                 <span class="label" data-i18n="treasure-u">TREASURE</span>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="page spells">    <div class="header">
+    </div></div><div class="page spells">    <div class="header">
         <div class="name-container">
             <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/srd5_360.png" style="padding-bottom: 5px;" alt="SRD5e by Roll20">
             <input type="text" name="attr_character_name" style="width: 100%;">
@@ -4592,9 +4607,7 @@
                 </fieldset>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="page options">    <div class="header">
+    </div></div><div class="page options">    <div class="header">
         <div class="name-container">
             <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/srd5_360.png" style="padding-bottom: 5px;" alt="SRD5e by Roll20">
             <input type="text" name="attr_character_name" style="width: 100%;">
@@ -5059,11 +5072,6 @@
                         <span data-i18n="animal_handling-core">Animal Handling <span>(Wis)</span></span>
                         <span>+</span><input type="text" class="num" name="attr_animal_handling_flat" value="0" placeholder="0" title="@{animal_handling_flat}">
                     </div>
-                    <div class="row skill" data-i18n-list-item="arcana">
-                        <select name="attr_arcana_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
-                        <span data-i18n="arcana-core">Arcana <span>(Int)</span></span>
-                        <span>+</span><input type="text" class="num" name="attr_arcana_flat" value="0" placeholder="0" title="@{arcana_flat}">
-                    </div>
                     <div class="row skill" data-i18n-list-item="athletics">
                         <select name="attr_athletics_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
                         <span data-i18n="athletics-core">Athletics <span>(Str)</span></span>
@@ -5073,6 +5081,11 @@
                         <select name="attr_deception_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
                         <span data-i18n="deception-core">Deception <span>(Cha)</span></span>
                         <span>+</span><input type="text" class="num" name="attr_deception_flat" value="0" placeholder="0" title="@{deception_flat}">
+                    </div>
+                    <div class="row skill" data-i18n-list-item="eldertech">
+                        <select name="attr_eldertech_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
+                        <span data-i18n="eldertech-core">Eldertech <span>(Int)</span></span>
+                        <span>+</span><input type="text" class="num" name="attr_eldertech_flat" value="0" placeholder="0" title="@{eldertech_flat}">
                     </div>
                     <div class="row skill" data-i18n-list-item="history">
                         <select name="attr_history_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
@@ -5094,9 +5107,14 @@
                         <span data-i18n="investigation-core">Investigation <span>(Int)</span></span>
                         <span>+</span><input type="text" class="num" name="attr_investigation_flat" value="0" placeholder="0" title="@{investigation_flat}">
                     </div>
+                    <div class="row skill" data-i18n-list-item="materials">
+                        <select name="attr_materials_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
+                        <span data-i18n="materials-core">Materials <span>(Int)</span></span>
+                        <span>+</span><input type="text" class="num" name="attr_materials_flat" value="0" placeholder="0" title="@{materials_flat}">
+                    </div>
                     <div class="row skill" data-i18n-list-item="medicine">
                         <select name="attr_medicine_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
-                        <span data-i18n="medicine-core">Medicine <span>(Wis)</span></span>
+                        <span data-i18n="medicine-core">Medicine <span>(Int)</span></span>
                         <span>+</span><input type="text" class="num" name="attr_medicine_flat" value="0" placeholder="0" title="@{medicine_flat}">
                     </div>
                     <div class="row skill" data-i18n-list-item="nature">
@@ -5118,6 +5136,11 @@
                         <select name="attr_persuasion_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
                         <span data-i18n="persuasion-core">Persuasion <span>(Cha)</span></span>
                         <span>+</span><input type="text" class="num" name="attr_persuasion_flat" value="0" placeholder="0" title="@{persuasion_flat}">
+                    </div>
+                    <div class="row skill" data-i18n-list-item="politics">
+                        <select name="attr_politics_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
+                        <span data-i18n="politics-core">Politics <span>(Int)</span></span>
+                        <span>+</span><input type="text" class="num" name="attr_politics_flat" value="0" placeholder="0" title="@{politics_flat}">
                     </div>
                     <div class="row skill" data-i18n-list-item="religion">
                         <select name="attr_religion_type"><option value="1" selected="selected" data-i18n="normal">Normal</option><option value="2" data-i18n="expirtise">Expertise</option></select>
@@ -5309,9 +5332,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="footer">
+    </div></div><div class="footer">
         <div style="margin-right: 50px; margin-left: 10px;">
             <span data-i18n="portions-sheet-utilize">
                 Portions of this sheet utilize content from the System Reference Document 5.0 under the OGL License. View OGL License and Copyright Notice. https://wiki.roll20.net/SRD_5.0_OGL_License
@@ -5321,14 +5342,7 @@
             <span data-i18n="footer-wiki-link">
                 For more information about this character sheet, its functionality, or uses, please check out the Roll20 Wiki for official documentation. https://wiki.roll20.net/5th_Edition_OGL_by_Roll20
             </span>
-        </div>
-    </div>
-  </div>
-  <input accept="Category" name="attr_drop_category" type="hidden"/>
-  <input accept="Name" name="attr_drop_name" type="hidden"/>
-  <input accept="data" name="attr_drop_data" type="hidden"/>
-  <input accept="Content" name="attr_drop_content" type="hidden"/>
-</div><input type="hidden" name="attr_d20" value="1d20">
+        </div></div></div><input accept="Category" name="attr_drop_category" type="hidden"/><input accept="Name" name="attr_drop_name" type="hidden"/><input accept="data" name="attr_drop_data" type="hidden"/><input accept="Content" name="attr_drop_content" type="hidden"/></div><input type="hidden" name="attr_d20" value="1d20">
 <input type="hidden" name="attr_level" value="1">
 <input type="hidden" name="attr_pb" value="2">
 <input type="hidden" name="attr_pbd_safe" value="">
@@ -5381,18 +5395,20 @@
 
 <input type='hidden' name='attr_acrobatics_bonus' value='0'>
 <input type='hidden' name='attr_animal_handling_bonus' value='0'>
-<input type='hidden' name='attr_arcana_bonus' value='0'>
 <input type='hidden' name='attr_athletics_bonus' value='0'>
 <input type='hidden' name='attr_deception_bonus' value='0'>
+<input type='hidden' name='attr_eldertech_bonus' value='0'>
 <input type='hidden' name='attr_history_bonus' value='0'>
 <input type='hidden' name='attr_insight_bonus' value='0'>
 <input type='hidden' name='attr_intimidation_bonus' value='0'>
 <input type='hidden' name='attr_investigation_bonus' value='0'>
+<input type='hidden' name='attr_materials_bonus' value='0'>
 <input type='hidden' name='attr_medicine_bonus' value='0'>
 <input type='hidden' name='attr_nature_bonus' value='0'>
 <input type='hidden' name='attr_perception_bonus' value='0'>
 <input type='hidden' name='attr_performance_bonus' value='0'>
 <input type='hidden' name='attr_persuasion_bonus' value='0'>
+<input type='hidden' name='attr_politics_bonus' value='0'>
 <input type='hidden' name='attr_religion_bonus' value='0'>
 <input type='hidden' name='attr_sleight_of_hand_bonus' value='0'>
 <input type='hidden' name='attr_stealth_bonus' value='0'>
@@ -5409,8 +5425,7 @@
 <input type='hidden' name='attr_lvl9_slots_total' value='0'>
 
 <input type='hidden' name='attr_l1mancer_status' value=''>
-<input type='hidden' name='attr_lpmancer_status' value=''>
-<div class="compendium_warning"><span data-i18n="accepting-drop-u">ACCEPTING DROP FROM COMPENDIUM</span></div>
+<input type='hidden' name='attr_lpmancer_status' value=''><div class="compendium_warning"><span data-i18n="accepting-drop-u">ACCEPTING DROP FROM COMPENDIUM</span></div>
 
 <div class="monster_confirm">
     <span data-i18n="are_you_sure">Are you sure you want to turn this character into a </span><span name="attr_drop_name"></span><span>?</span>
@@ -5438,7 +5453,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="rolltemplates">    <rolltemplate class="sheet-rolltemplate-simple">
         <div class="licensedsheet-flag-{{licensedsheet}}"></div>
@@ -6578,10 +6592,7 @@
                 </div>
             {{/r20}}
         </div>
-    </rolltemplate>
-</div>
-<script type="text/worker">
-      on("sheet:opened", function(eventinfo) {
+    </rolltemplate></div><script type="text/worker">    on("sheet:opened", function(eventinfo) {
         versioning(function() {
             var getInfo = function(sections, callback, results) {
                 results =  results || {};
@@ -6750,10 +6761,10 @@
                     update_initiative();
                     break;
                 case "intelligence":
-                    update_skills(["arcana", "history", "investigation", "nature", "religion"]);
+                    update_skills(["eldertech", "history", "investigation", "materials", "medicine", "nature", "politics", "religion"]);
                     break;
                 case "wisdom":
-                    update_skills(["animal_handling", "insight", "medicine", "perception", "survival"]);
+                    update_skills(["animal_handling", "insight", "perception", "survival"]);
                     break;
                 case "charisma":
                     update_skills(["deception", "intimidation", "performance", "persuasion"]);
@@ -6781,8 +6792,8 @@
         update_save("death");
     });
 
-    ['acrobatics','animal_handling','arcana','athletics','deception','history','insight','intimidation','investigation',
-    'medicine','nature','perception','performance','persuasion','religion','sleight_of_hand','stealth','survival'].forEach(attr => {
+    ['acrobatics','animal_handling','eldertech','athletics','deception','history','insight','intimidation','investigation','materials',
+    'medicine','nature','perception','performance','persuasion','politics','religion','sleight_of_hand','stealth','survival'].forEach(attr => {
         on(`change:${attr}_prof change:${attr}_type change:${attr}_flat`, function(eventinfo) {
             if(eventinfo.sourceType === "sheetworker") {return;};
             update_skills([`${attr}`]);
@@ -7125,7 +7136,7 @@
         update_npc_saves();
     });
 
-    on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
+    on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_eldertech_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_materials_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_politics_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
         update_npc_skills();
     });
 
@@ -7455,11 +7466,11 @@
 
     var update_all_ability_checks = function(){
         update_initiative();
-        update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion"]);
+        update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "eldertech", "history", "investigation", "nature", "religion", "animal_handling", "insight", "materials", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion", "politics"]);
     };
 
     var update_skills = function (skills_array) {
-        var skill_parent = {athletics: "strength", acrobatics: "dexterity", sleight_of_hand: "dexterity", stealth: "dexterity", arcana: "intelligence", history: "intelligence", investigation: "intelligence", nature: "intelligence", religion: "intelligence", animal_handling: "wisdom", insight: "wisdom", medicine: "wisdom", perception: "wisdom", survival: "wisdom", deception: "charisma", intimidation: "charisma", performance: "charisma", persuasion: "charisma"};
+        var skill_parent = {athletics: "strength", acrobatics: "dexterity", sleight_of_hand: "dexterity", stealth: "dexterity", eldertech: "intelligence", history: "intelligence", investigation: "intelligence", nature: "intelligence", religion: "intelligence", animal_handling: "wisdom", insight: "wisdom", materials: "intelligence", medicine: "intelligence", perception: "wisdom", survival: "wisdom", deception: "charisma", intimidation: "charisma", performance: "charisma", persuasion: "charisma", politics: "intelligence"};
         var attrs_to_get = ["pb","pb_type","jack_of_all_trades","jack"];
         var update = {};
         var callbacks = [];
@@ -8074,7 +8085,7 @@
             update["npc_senses"] = senses;
 
             //SAVES & SKILLS
-            const npcSavesSkills = ["str_save", "dex_save", "con_save", "int_save", "wis_save", "cha_save",'acrobatics','animal_handling','arcana','athletics','deception','history','insight','intimidation','investigation','medicine','nature','perception','performance','persuasion','religion','sleight_of_hand','stealth','survival'];
+            const npcSavesSkills = ["str_save", "dex_save", "con_save", "int_save", "wis_save", "cha_save",'acrobatics','animal_handling','eldertech','athletics','deception','history','insight','intimidation','investigation','materials','medicine','nature','perception','performance','persuasion','politics','religion','sleight_of_hand','stealth','survival'];
             npcSavesSkills.forEach((attr) => {
                 update[`npc_${attr}_base`] = "";
             });
@@ -8852,18 +8863,20 @@
             if(mod.indexOf("ability checks") > -1) {update_all_ability_checks();};
             if(mod.indexOf("acrobatics") > -1) {update_skills(["acrobatics"]);};
             if(mod.indexOf("animal handling") > -1) {update_skills(["animal_handling"]);};
-            if(mod.indexOf("arcana") > -1) {update_skills(["arcana"]);};
+            if(mod.indexOf("eldertech") > -1) {update_skills(["eldertech"]);};
             if(mod.indexOf("athletics") > -1) {update_skills(["athletics"]);};
             if(mod.indexOf("deception") > -1) {update_skills(["deception"]);};
             if(mod.indexOf("history") > -1) {update_skills(["history"]);};
             if(mod.indexOf("insight") > -1) {update_skills(["insight"]);};
             if(mod.indexOf("intimidation") > -1) {update_skills(["intimidation"]);};
             if(mod.indexOf("investigation") > -1) {update_skills(["investigation"]);};
+            if(mod.indexOf("materials") > -1) {update_skills(["materials"]);};
             if(mod.indexOf("medicine") > -1) {update_skills(["medicine"]);};
             if(mod.indexOf("nature") > -1) {update_skills(["nature"]);};
             if(mod.indexOf("perception") > -1) {update_skills(["perception"]);};
             if(mod.indexOf("performance") > -1) {update_skills(["performance"]);};
             if(mod.indexOf("persuasion") > -1) {update_skills(["persuasion"]);};
+            if(mod.indexOf("politics") > -1) {update_skills(["politics"]);};
             if(mod.indexOf("religion") > -1) {update_skills(["religion"]);};
             if(mod.indexOf("sleight of hand") > -1) {update_skills(["sleight_of_hand"]);};
             if(mod.indexOf("stealth") > -1) {update_skills(["stealth"]);};
@@ -10189,7 +10202,7 @@
             callbacks.push( function() {update_initiative();} );
             callbacks.push( function() {update_tool("all");} );
             callbacks.push( function() {update_all_saves();} );
-            callbacks.push( function() {update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion"]);} );
+            callbacks.push( function() {update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "eldertech", "history", "investigation", "nature", "religion", "animal_handling", "insight", "materials", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion", "politics"]);} );
 
             setAttrs(update, {silent: true}, function() {callbacks.forEach(function(callback) {callback(); })} );
         });
@@ -10348,7 +10361,7 @@
     };
 
     const update_npc_skills = () => {
-        const list = ["npc_acrobatics_base","npc_animal_handling_base","npc_arcana_base","npc_athletics_base","npc_deception_base","npc_history_base","npc_insight_base","npc_intimidation_base","npc_investigation_base","npc_medicine_base","npc_nature_base","npc_perception_base","npc_performance_base","npc_persuasion_base","npc_religion_base","npc_sleight_of_hand_base","npc_stealth_base","npc_survival_base"];
+        const list = ["npc_acrobatics_base","npc_animal_handling_base","npc_eldertech_base","npc_athletics_base","npc_deception_base","npc_history_base","npc_insight_base","npc_intimidation_base","npc_investigation_base","npc_materials_base","npc_medicine_base","npc_nature_base","npc_perception_base","npc_performance_base","npc_persuasion_base","npc_politics_base","npc_religion_base","npc_sleight_of_hand_base","npc_stealth_base","npc_survival_base"];
         const type = "skills";
         update_npc_lists(list, type);
     };
@@ -10789,7 +10802,7 @@
             debugger
         });
     }); */
-      var v2_old_values_check = function() {
+    var v2_old_values_check = function() {
         // update_attacks("all");
         var update = {};
         var attrs = ["simpletraits","features_and_traits","initiative_bonus","npc","character_id"];
@@ -10840,10 +10853,10 @@
     }
 
     var upgrade_to_2_0 = function(doneupdating) {
-        getAttrs(["npc","strength","dexterity","constitution","intelligence","wisdom","charisma","strength_base","dexterity_base","constitution_base","intelligence_base","wisdom_base","charisma_base","deathsavemod","death_save_mod","npc_str_save","npc_dex_save","npc_con_save","npc_int_save","npc_wis_save","npc_cha_save","npc_str_save_base","npc_dex_save_base","npc_con_save_base","npc_int_save_base","npc_wis_save_base","npc_cha_save_base","npc_acrobatics_base", "npc_animal_handling_base", "npc_arcana_base", "npc_athletics_base", "npc_deception_base", "npc_history_base", "npc_insight_base", "npc_intimidation_base", "npc_investigation_base", "npc_medicine_base", "npc_nature_base", "npc_perception_base", "npc_performance_base", "npc_persuasion_base", "npc_religion_base", "npc_sleight_of_hand_base", "npc_stealth_base", "npc_survival_base", "npc_acrobatics", "npc_animal_handling", "npc_arcana", "npc_athletics", "npc_deception", "npc_history", "npc_insight", "npc_intimidation", "npc_investigation", "npc_medicine", "npc_nature", "npc_perception", "npc_performance", "npc_persuasion", "npc_religion", "npc_sleight_of_hand", "npc_stealth", "npc_survival"], function(v) {
+        getAttrs(["npc","strength","dexterity","constitution","intelligence","wisdom","charisma","strength_base","dexterity_base","constitution_base","intelligence_base","wisdom_base","charisma_base","deathsavemod","death_save_mod","npc_str_save","npc_dex_save","npc_con_save","npc_int_save","npc_wis_save","npc_cha_save","npc_str_save_base","npc_dex_save_base","npc_con_save_base","npc_int_save_base","npc_wis_save_base","npc_cha_save_base","npc_acrobatics_base", "npc_animal_handling_base", "npc_eldertech_base", "npc_athletics_base", "npc_deception_base", "npc_history_base", "npc_insight_base", "npc_intimidation_base", "npc_investigation_base", "npc_materials_base", "npc_medicine_base", "npc_nature_base", "npc_perception_base", "npc_performance_base", "npc_persuasion_base", "npc_politics_base", "npc_religion_base", "npc_sleight_of_hand_base", "npc_stealth_base", "npc_survival_base", "npc_acrobatics", "npc_animal_handling", "npc_eldertech", "npc_athletics", "npc_deception", "npc_history", "npc_insight", "npc_intimidation", "npc_investigation", "npc_materials", "npc_medicine", "npc_nature", "npc_perception", "npc_performance", "npc_persuasion", "npc_politics", "npc_religion", "npc_sleight_of_hand", "npc_stealth", "npc_survival"], function(v) {
             var update = {};
             var stats = ["strength","dexterity","constitution","intelligence","wisdom","charisma"];
-            var npc_stats = ["npc_str_save","npc_dex_save","npc_con_save","npc_int_save","npc_wis_save","npc_cha_save","npc_acrobatics", "npc_animal_handling", "npc_arcana", "npc_athletics", "npc_deception", "npc_history", "npc_insight", "npc_intimidation", "npc_investigation", "npc_medicine", "npc_nature", "npc_perception", "npc_performance", "npc_persuasion", "npc_religion", "npc_sleight_of_hand", "npc_stealth", "npc_survival"];
+            var npc_stats = ["npc_str_save","npc_dex_save","npc_con_save","npc_int_save","npc_wis_save","npc_cha_save","npc_acrobatics", "npc_animal_handling", "npc_eldertech", "npc_athletics", "npc_deception", "npc_history", "npc_insight", "npc_intimidation", "npc_investigation", "npc_materials", "npc_medicine", "npc_nature", "npc_perception", "npc_performance", "npc_persuasion", "npc_politics", "npc_religion", "npc_sleight_of_hand", "npc_stealth", "npc_survival"];
             _.each(stats, function(attr) {
                 if(v[attr] && v[attr] != "10" && v[attr + "_base"] == "10") {
                     update[attr + "_base"] = v[attr];
@@ -10883,7 +10896,7 @@
                     update_mod("wisdom");
                     update_mod("charisma");
                     update_all_saves();
-                    update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion"]);
+                    update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "eldertech", "history", "investigation", "nature", "religion", "animal_handling", "insight", "materials", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion", "politics"]);
                     update_tool("all")
                     update_attacks("all");
                     update_pb();
@@ -14373,7 +14386,7 @@
         var allDrops = [];
         var currentDrop = 0;
         var totalDrops = 1;
-        var allSkills = ["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion"];
+        var allSkills = ["athletics", "acrobatics", "sleight_of_hand", "stealth", "eldertech", "history", "investigation", "nature", "religion", "animal_handling", "insight", "materials", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion", "politics"];
         var allAbilities = abilityList.map(function(x) {return x.toLowerCase()});
         var eraseSections = ["attack", "inventory", "traits", "resource", "proficiencies", "tool", "damagemod", "spell-cantrip", "hpmod", "acmod", "tohitmod", "savemod", "skillmod"];
         console.log(blobs);
@@ -14842,7 +14855,7 @@
             }).join(" ");
         };
         var spellSections = ["spell-cantrip"];
-        var allSkills = ["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion"];
+        var allSkills = ["athletics", "acrobatics", "sleight_of_hand", "stealth", "eldertech", "history", "investigation", "nature", "religion", "animal_handling", "insight", "materials", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion", "politics"];
         var skillget = [];
         for(var x=1; x<=9; x++) {
             spellSections.push("spell-" + x);
@@ -17067,7 +17080,7 @@
         var allDrops = [];
         var currentDrop = 0;
         var totalDrops = 1;
-        var allSkills = ["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival","deception", "intimidation", "performance", "persuasion"];
+        var allSkills = ["athletics", "acrobatics", "sleight_of_hand", "stealth", "eldertech", "history", "investigation", "nature", "religion", "animal_handling", "insight", "materials", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion", "politics"];
         var allAbilities = abilityList.map(function(x) {return x.toLowerCase()});
         set["lp-mancer_status"] = "";
         console.log(blobs);
@@ -17273,8 +17286,7 @@
         });
         /* */
     });
- //# sourceURL=dnd5e.js
-</script><charmancer class="sheet-repeating-topbar">
+ //# sourceURL=dnd5e.js</script><charmancer class="sheet-repeating-topbar">
     <div class="topbar-container">
         <div class="sheet-attr-container">
             <h4 data-i18n="strength">Strength</h4>
