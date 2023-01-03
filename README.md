@@ -1,4 +1,4 @@
-Character Sheet Code Migration
+Redsky 5e Character Sheet
 ==================================
 
-This character sheet is a legacy copy of the D&D 5th Edition character sheet by Roll20. This sheet is open to continued community development and is not supported further by Roll20.
+This is the official Redsky character sheet for Roll20, based on the legacy copy of the D&D 5th Edition character sheet.
