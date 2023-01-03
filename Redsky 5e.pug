@@ -31,8 +31,8 @@ input.licensedsheet(name='attr_licensedsheet' type='hidden')
 		span(data-i18n="core-u") CORE
 		input.tab-button.bio(name="attr_tab" type="radio" value="bio")
 		span(data-i18n="bio-u") BIO
-		input.tab-button.spells(name="attr_tab" type="radio" value="spells")
-		span(data-i18n="spells-u") SPELLS
+		//-input.tab-button.spells(name="attr_tab" type="radio" value="spells")
+		//-span(data-i18n="spells-u") SPELLS
 		input.tab-button.options(name="attr_tab" type="radio" value="options")
 		span(style="font-family: pictos") y
 
@@ -42,8 +42,8 @@ input.licensedsheet(name='attr_licensedsheet' type='hidden')
 		.page.bio
 			include src/html/pc/bio.html
 
-		.page.spells
-			include src/html/pc/spells.html
+		//-.page.spells
+		//-	include src/html/pc/spells.html
 
 		.page.options
 			include src/html/pc/options.html
@@ -71,15 +71,15 @@ include src/html/confirms.html
 script(type="text/worker")
 	include src/js/sheetworkers.js
 	include src/js/versioning.js
-	include src/js/charactermancer/l1.js
-	include src/js/charactermancer/lp.js
+	//-include src/js/charactermancer/l1.js
+	//-include src/js/charactermancer/lp.js
 
 //- CHARACTERMANCER REPEATING SECTIONS
-include src/html/charactermancer/repeatingsections.html
+//-include src/html/charactermancer/repeatingsections.html
 
 //- CHARACTERMANCER LEVEL 1
-include src/html/charactermancer/l1.html
+//-include src/html/charactermancer/l1.html
 
 
 //- CHARACTERMANCER LEVEL UP
-include src/html/charactermancer/lp.html
+//-include src/html/charactermancer/lp.html
