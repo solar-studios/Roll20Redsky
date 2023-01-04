@@ -74,7 +74,7 @@ input[type=radio].sheet-tab-button + span {
 .sheet-advantagetoggle input[type=radio]:checked + span,
 input[type=radio].sheet-tab-button:checked + span {
   color: #FFFFFF;
-  background-color: #EC2127;
+  background-color: #a17c03;
 }
 
 .sheet-advantagetoggle input.sheet-toggle-left,
@@ -492,7 +492,7 @@ button[type=roll] * {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background: url("https://raw.githubusercontent.com/solar-studios/Roll20Redsky/main/images/eldertech.svg") left top no-repeat;
+  background: url("https://raw.githubusercontent.com/solar-studios/Roll20Redsky/main/images/diamond.svg") left top no-repeat;
   background-size: contain;
   cursor: pointer;
   position: absolute;
@@ -707,7 +707,10 @@ button[type=roll] * {
   border: none;
 }
 
-.sheet-ac-init-speed-container,
+.sheet-ac-init-speed-container {
+  width: 240px;
+}
+
 .sheet-hp,
 .sheet-exhaustion,
 .sheet-hdice-dsaves-container,
