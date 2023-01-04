@@ -208,6 +208,14 @@
             <input type="text" name="attr_npc_condition_immunities" placeholder="charmed" data-i18n-placeholder="npc-cond-imm-place">
         </div>
         <div class="row">
+            <span data-i18n="arm-prot-u">ARMOR PROTECTIONS</span>
+            <input type="text" name="attr_npc_armor_protections" placeholder="bludgeoning" data-i18n-placeholder="npc-arm-prot-place">
+        </div>
+        <div class="row">
+            <span data-i18n="arm-weak-u">ARMOR WEAKNESSES</span>
+            <input type="text" name="attr_npc_armor_weaknesses" placeholder="piercing" data-i18n-placeholder="npc-arm-weak-place">
+        </div>
+        <div class="row">
             <span data-i18n="senses-u">SENSES</span>
             <input type="text" name="attr_npc_senses" placeholder="darkvision 120ft., passive Perception 16" data-i18n-placeholder="npc-senses-place">
         </div>
@@ -597,6 +605,16 @@
         <div class="row status condition_immunities red">
             <span class="bold" data-i18n="cond-imm">Condition Immunities</span>
             <span class="info" name="attr_npc_condition_immunities"></span>
+        </div>
+        <input class="flag" type="hidden" name="attr_npc_armor_protections">
+        <div class="row status protections red">
+            <span class="bold" data-i18n="arm-prot">Armor Protections</span>
+            <span class="info" name="attr_npc_armor_protections"></span>
+        </div>
+        <input class="flag" type="hidden" name="attr_npc_armor_weaknesses">
+        <div class="row status weaknesses red">
+            <span class="bold" data-i18n="arm-weak">Armor Weaknesses</span>
+            <span class="info" name="attr_npc_armor_weaknesses"></span>
         </div>
         <div class="row senses red">
             <span class="bold" data-i18n="senses">Senses</span>
