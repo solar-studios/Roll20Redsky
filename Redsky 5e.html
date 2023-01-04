@@ -18,7 +18,7 @@
         <div class="row">
             <span data-i18n="armor-class-u">ARMOR CLASS</span>
             <input class="num" type="text" name="attr_npc_ac" placeholder="10">
-            <span data-i18n="armor-class-u">TOUCH AC</span>
+            <span data-i18n="touch-ac-u">TOUCH AC</span>
             <input class="num" type="text" name="attr_npc_tac" placeholder="10">
             <span data-i18n="type-u">TYPE</span>
             <input type="text" name="attr_npc_actype" placeholder="scale mail" data-i18n-placeholder="npc-armor-place" value="">
@@ -32,6 +32,10 @@
         <div class="row">
             <span data-i18n="speed-u">SPEED</span>
             <input type="text" name="attr_npc_speed" placeholder="30 ft., fly 60ft." data-i18n-placeholder="npc-speed-place">
+        </div>
+        <div class="row">
+            <span data-i18n="social-u">SOCIAL SCORE</span>
+            <input type="text" name="attr_npc_social" placeholder="0">
         </div>
         <div class="spacer"></div>
         <div class="row">
@@ -339,6 +343,10 @@
         <div class="row red">
             <span data-i18n="speed" class="bold">Speed</span>
             <span name="attr_npc_speed"></span>
+        </div>
+        <div class="row red">
+            <span data-i18n="social" class="bold">Social score</span>
+            <span name="attr_npc_social"></span>
         </div>
         <div class="triangle"></div>
         <div class="row red">
@@ -1396,10 +1404,6 @@
                     <input type="text" name="attr_ac" title="@{ac}">
                     <span class="label pc-ac" data-i18n="armor-class-u">ARMOR CLASS</span>
                 </div>
-                <div class="ac">
-                    <input type="text" name="attr_tac" title="@{tac}">
-                    <span class="label pc-ac" data-i18n="touch-ac-u">TOUCH AC</span>
-                </div>
                 <div class="init">
                     <span name="attr_initiative_bonus" title="@{initiative_bonus}"></span>
                     <button type="roll" name="roll_initiative" value="@{wtype}&{template:simple} {{rname=^{init-u}}} {{mod=@{initiative_bonus}}} {{r1=[[@{initiative_style}+@{initiative_bonus}@{pbd_safe}[INIT] &{tracker}]]}} {{normal=1}} @{charname_output} {{licensedsheet=@{licensedsheet}}}" data-i18n="init-u">INITIATIVE</button>
@@ -1407,6 +1411,16 @@
                 <div class="speed">
                     <input type="text" name="attr_speed" title="@{speed}">
                     <span class="label" data-i18n="speed-u">SPEED</span>
+                </div>
+            </div>
+            <div class="touch-social-container">
+                <div class="ac">
+                    <input type="text" name="attr_tac" title="@{tac}">
+                    <span class="label pc-ac" data-i18n="touch-ac-u">TOUCH AC</span>
+                </div>
+                <div class="ac">
+                    <input type="text" name="attr_social" title="@{social}">
+                    <span class="label" data-i18n="social-u">SOCIAL SCORE</span>
                 </div>
             </div>
             <div class="hp">
