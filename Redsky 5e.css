@@ -492,7 +492,7 @@ button[type=roll] * {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background: url("https://raw.githubusercontent.com/solar-studios/Roll20Redsky/main/images/insperation.gif") left top no-repeat;
+  background: url("https://raw.githubusercontent.com/solar-studios/Roll20Redsky/main/images/eldertech.svg") left top no-repeat;
   background-size: contain;
   cursor: pointer;
   position: absolute;
