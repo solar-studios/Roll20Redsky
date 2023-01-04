@@ -552,6 +552,7 @@ button[type=roll] * {
 .sheet-saving-throw input[type=text],
 .sheet-skill input[type=text],
 .sheet-ac-init-speed-container input,
+.sheet-touch-social-container input,
 .sheet-hp input,
 .sheet-exhaustion input,
 .sheet-hdice-dsaves-container input[type=text],
@@ -639,6 +640,7 @@ button[type=roll] * {
 .sheet-skills-container .sheet-label span,
 .sheet-textbox-container .sheet-label span,
 .sheet-ac-init-speed-container span.sheet-label,
+.sheet-touch-social-container span.sheet-label,
 .sheet-hp span,
 .sheet-exhaustion span.sheet-label,
 .sheet-hdice-dsaves-container span,
@@ -741,7 +743,8 @@ button[type=roll] * {
     border: none;
 }
 
-.sheet-ac-init-speed-container
+.sheet-ac-init-speed-container,
+.sheet-touch-social-container
 {
     width: 240px;
 }
@@ -757,6 +760,16 @@ button[type=roll] * {
 }
 
 .sheet-ac-init-speed-container div {
+    width: calc(31%);
+    margin-bottom: 10px;
+    height: 100%;
+    border: 1px solid #666;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sheet-touch-social-container div {
     width: calc(48%);
     margin-bottom: 10px;
     height: 100%;
